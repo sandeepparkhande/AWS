@@ -1,0 +1,9 @@
+sudo su
+yum update -y
+yum install httpd -y
+systemctl start httpd
+systemctl enable httpd
+echo "Getting started with AWS" > /var/www/html/index.html
+echo "Welcome to in28minutes $(whoami)" > /var/www/html/index.html
+echo "Welcome to in28minutes $(hostname)" > /var/www/html/index.html
+echo "Welcome to in28minutes $(hostname -i)" > /var/www/html/index.html
